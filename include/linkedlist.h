@@ -70,7 +70,6 @@ public:
 
 private:
 	Node* m_head = NULL;
-	//Node* m_tail = NULL;
 
 };
 
