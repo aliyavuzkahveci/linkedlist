@@ -32,6 +32,14 @@ int main()
 
 	std::cout << "is linkedlist empty=" << std::boolalpha << linkedList.empty() << std::endl;
 
+	linkedList.reverse();
+	std::cout << "After reversing the linked list" << std::endl;
+	linkedList.print();
+
+	linkedList.reverse();
+	std::cout << "After reversing the linked list" << std::endl;
+	linkedList.print();
+
 	linkedList.erase(4);
 	linkedList.print();
 

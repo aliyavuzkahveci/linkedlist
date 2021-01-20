@@ -239,7 +239,24 @@ namespace linkedlist
 	
 	void LinkedList::reverse() noexcept
 	{
+		if(m_head == NULL)
+		{
+			return;
+		}
 
+		Node* current = m_head;
+		Node* oldPrev = NULL;
+		while(current != NULL)
+		{
+			Node* oldNext = current->next;
+
+			current->next = oldPrev;
+
+			oldPrev = current;
+			current = oldNext;
+		}
+
+		m_head = oldPrev;
 	}
 
 	void LinkedList::remove_value(int value)
